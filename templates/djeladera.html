@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geladeira</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </head>
 <body>
-    
+    <div class="titulo" >
+        <h1>Bem vindo a Geladeira do Rytas! Coloque seu CEP e escolha uma bebida.</h1>
+    </div>
+
+    <form method="get" action=".">
+        <div class="input inputCEP">
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                onblur="pesquisacep(this.value);" />
+            <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+            <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+        </div>
+    </form>
+
+    <div class="geladeira card">
+        <div class="card">
+            {% for item in itens %}
+                <div class="container">
+                <img class="img" src="{{item.rota}}">
+                <p class="center">R${{item.preco}}</p>
+                <button class="button_choice center">Buy</button>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="card">
+            {% for item in itens2 %}
+                <div class="container">
+                <img class="img" src="{{item.rota}}">
+                <p class="center">R${{item.preco}}</p>
+                <button class="button_choice center">Buy</button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
+
 </html>
