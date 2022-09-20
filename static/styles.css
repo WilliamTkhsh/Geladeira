@@ -11,7 +11,20 @@
     flex-direction: row;
 }
 .geladeira{
+    border-radius: 100px;
     display: block;
+    margin: 17%;
+}
+
+.linha1 {
+    margin-bottom:10px; 
+}
+.linha2 {
+    margin: 10px 10%;
+}
+.linha3 {
+    margin-top: 10px;
+    margin-bottom: 400px;
 }
 /* Add some padding inside the card container */
 .container {
@@ -30,8 +43,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
-    height: 185.25px;
+    height: 170px;
 }
 
 .input{
@@ -42,6 +54,7 @@
 
 .inputCEP{
     margin-top: 50px;
+    display: inline-grid;
 }
 
 /* CSS */
