@@ -43,7 +43,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 170px;
+    height: 160px;
 }
 
 .input{
@@ -54,10 +54,24 @@
 
 .inputCEP{
     margin-top: 50px;
-    display: inline-grid;
 }
 
-/* CSS */
+.input__searchCEP {
+    width:40%;
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.input__read[readonly] {
+    cursor: not-allowed;
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
 .button_choice {
     display: block;
     margin-left: auto;
