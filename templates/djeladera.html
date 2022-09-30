@@ -16,43 +16,13 @@
         <h1 style="color:white">Bem vindo a Geladeira do Rytas! Coloque seu CEP e escolha uma bebida.</h1>
     </div>
 
-
-    <div class="center col-md-12 center" style="margin-top:10%;">
-        <div class="row">
-            <div class="col form-group fg-line">
-                <input class="input__searchCEP" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                    onblur="pesquisacep(this.value);" placeholder="CEP" required style="
-                    margin-left: 40%;"/>
-            </div>
-            <div class="col form-group fg-line">        
-                <input class="input__read" name="rua" type="text" id="rua" size="60" placeholder="Logradouro" readonly style="
-                margin-right: 40%;"/><br />
-            </div>    
-        </div>
-        <div class="row">
-            <div class="col-sm-5 form-group fg-line">
-                <input class="input__read" name="bairro" type="text" id="bairro" size="40" placeholder="Bairro" readonly style="
-                margin-left: 40%;"/><br />
-            </div>
-            <div class="col-sm-4 form-group fg-line">
-                <input class="input__read" name="cidade" type="text" id="cidade" size="40" placeholder="Cidade" readonly/><br />
-            </div>
-            <div class="col-sm-2 form-group fg-line">
-                <input class="input__read" name="uf" type="text" id="uf" size="2" placeholder="Estado" readonly style="
-                margin-right: 40%;
-            "/><br />
-            </div>
-        </div>
-    </div>
-
-
     <div class="geladeira card">
         <div class="linha1 card">
             {% for item in itens %}
                 <div class="container">
                 <img class="img" src="{{item.rota}}">
                 <p class="center">R${{item.preco}}</p>
-                <button class="button_choice center">Buy</button>
+                <button id='button_choice' class="button_choice center">Buy</button>
                 </div>
             {% endfor %}
         </div>
@@ -83,6 +53,35 @@
                 </div>
             {% endfor %}
         </div>
+    </div>
+
+    <div class="formCep col-md-12 center" style="margin-top:10%; display: none;">
+        <div class="row">
+            <div class="col form-group fg-line">
+                <input class="input__searchCEP" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                    onblur="pesquisacep(this.value);" placeholder="CEP" required style="
+                    margin-left: 40%;"/>
+            </div>
+            <div class="col form-group fg-line">        
+                <input class="input__read" name="rua" type="text" id="rua" size="60" placeholder="Logradouro" readonly style="
+                margin-right: 40%;"/><br />
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-sm-5 form-group fg-line">
+                <input class="input__read" name="bairro" type="text" id="bairro" size="40" placeholder="Bairro" readonly style="
+                margin-left: 40%;"/><br />
+            </div>
+            <div class="col-sm-4 form-group fg-line">
+                <input class="input__read" name="cidade" type="text" id="cidade" size="40" placeholder="Cidade" readonly/><br />
+            </div>
+            <div class="col-sm-2 form-group fg-line">
+                <input class="input__read" name="uf" type="text" id="uf" size="2" placeholder="Estado" readonly style="
+                margin-right: 40%;
+            "/><br />
+            </div>
+        </div>
+        <button id='button_send' class="button_send" style="margin-top: 3%">Enviar</button>
     </div>
 
     <div>
