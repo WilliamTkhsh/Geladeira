@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Noto+Sans+JP&family=Poppins&family=Varela+Round&display=swap');
+
 .titulo {
     margin: 10px;
     text-align: center;
+    font-family: 'Varela Round', sans-serif;
 }
 .card {
     /* Add shadows to create the "card" effect */
@@ -39,6 +42,11 @@
     text-align: center;
 }
 
+.price {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Varela Round', sans-serif;
+}
 
 .img {
     display: block;
@@ -57,12 +65,13 @@
     margin-top: 50px;
 }
 
-.input__searchCEP {
+.input__searchCEP, .input__write {
     width:40%;
     border: 2px solid #333;
     border-radius: 50px;
     padding: 5px;
     margin-top: 10px;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .input__read[readonly] {
@@ -71,9 +80,10 @@
     border-radius: 50px;
     padding: 5px;
     margin-top: 10px;
+    font-family: 'Varela Round', sans-serif;
 }
 
-.button_choice,.button_send {
+.button_choice {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -92,9 +102,32 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-family: 'Varela Round', sans-serif;
 }
 
-.button_choice,.button_send:hover {
+.button_choice:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.titulo_enviado {
+    margin: 10%;
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.new_order, .button_send {
+    background: transparent linear-gradient(180deg,#cc6709,#f6b85a) 0 0 no-repeat padding-box;
+    border-radius: 50px;
+    color: #fff!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    width: 238px;
+    height: 52px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
 }
