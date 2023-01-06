@@ -9,20 +9,28 @@ $(document).ready(function(){
             } else if ($("input[name=numero]").val() == ''){
                 alert('Preencha o campo de Número');
             } else {
-                var logradouro = $("input[name=rua]").val();
-                var bairro = $("input[name=bairro]").val();
-                var numero = $("input[name=numero]").val();
-                var complemento = $("input[name=complemento]").val();
-                if (complemento != "") {
-                    $('.endereco_enviado').text(logradouro + ", " + numero + ", " + complemento + ", "  +  bairro);
-                } else {
-                    $('.endereco_enviado').text(logradouro + ", " + numero + ", " +  bairro);
-                }
-                $('.enviado').text("Ótimo! Estamos enviando " + nome_produto + " para o endereço");
 
-                $('.truck_gif').attr('style', 'display:block; margin: 10px 35%;');
-                window.scrollTo(0,4000);
+                $('.pagamento').attr('style', 'margin: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center;');
+                $('.container_pagamento').attr('style', 'display: flex; flex-direction: row;');
+
+                window.scrollTo(0,3000);
             }
+        })
+        $('.button_pay').click(function(e){
+            var logradouro = $("input[name=rua]").val();
+            var bairro = $("input[name=bairro]").val();
+            var numero = $("input[name=numero]").val();
+            var complemento = $("input[name=complemento]").val();
+            if (complemento != "") {
+                $('.endereco_enviado').text(logradouro + ", " + numero + ", " + complemento + ", "  +  bairro);
+            } else {
+                $('.endereco_enviado').text(logradouro + ", " + numero + ", " +  bairro);
+            }
+            $('.enviado').text("Ótimo! Estamos enviando " + nome_produto + " para o endereço");
+
+            $('.truck_gif').attr('style', 'display:block; margin: 10px 35%;');
+
+            window.scrollTo(0,4000);
         });
     });
 })
